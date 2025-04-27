@@ -1,0 +1,533 @@
+/* color palette (and more) standard(s) for LUZORA*/
+:root {
+  /* Primary  */
+  --yellow-25: #fefdf1;
+  --yellow-50: #fefbed;
+  --yellow-100: #fbf2c8;
+  --yellow-200: #f9ecae;
+  --yellow-300: #f6e389;
+  --yellow-400: #f5dd72;
+  --yellow-brand: #f8d424;
+  --yellow-500: #f2d54f;
+  --yellow-600: #dcc248;
+  --yellow-700: #ac9738;
+  --yellow-800: #85752b;
+  --yellow-900: #665921;
+  --yellow-950: #534710;
+
+  /* Neutral  */
+  --white: #ffffff;
+  --gray-25: #f9f9f9;
+  --gray-50: #f2f2f2;
+  --gray-100: #e5e5e5;
+  --gray-200: #cccccc;
+  --gray-300: #b2b2b2;
+  --gray-400: #999999;
+  --gray-500: #808080;
+  --gray-600: #666666;
+  --gray-700: #4d4d4d;
+  --gray-800: #333333;
+  --gray-900: #1a1a1a;
+  --gray-925: #131313;
+  --gray-950: #0d0d0d;
+  --black: #000000;
+
+  /* Error */
+  --red-25: #fefafa;
+  --red-50: #fcf3f2;
+  --red-100: #fae5e2;
+  --red-200: #f6cfca;
+  --red-300: #f0a59e;
+  --red-400: #e8786b;
+  --red-500: #de5242;
+  --red-600: #c83e2d;
+  --red-700: #a43123;
+  --red-800: #852a1f;
+  --red-900: #712d1f;
+  --red-950: #4e1b10;
+
+  /* Success  */
+  --green-25: #f8fef9;
+  --green-50: #effcf3;
+  --green-100: #e1f9e7;
+  --green-200: #afe2be;
+  --green-300: #90ddab;
+  --green-400: #6fca8f;
+  --green-500: #53af70;
+  --green-600: #42925b;
+  --green-700: #33744b;
+  --green-800: #285c3d;
+  --green-900: #214c33;
+  --green-950: #143222;
+
+  /* Warning */
+  --orange-25: #fffcf6;
+  --orange-50: #fefaec;
+  --orange-100: #fbefca;
+  --orange-200: #f9e094;
+  --orange-300: #f6ca62;
+  --orange-400: #f2b346;
+  --orange-500: #e99536;
+  --orange-600: #cd6f29;
+  --orange-700: #a84e20;
+  --orange-800: #883d1b;
+  --orange-900: #703317;
+  --orange-950: #48200f;
+
+  /* Information */
+  --blue-25: #f6fafe;
+  --blue-50: #f1f8fe;
+  --blue-100: #d6e8fd;
+  --blue-200: #bbdcfc;
+  --blue-300: #94c8fa;
+  --blue-400: #6caff7;
+  --blue-500: #4c8ef2;
+  --blue-600: #346ee7;
+  --blue-700: #2d5bcc;
+  --blue-800: #2648a3;
+  --blue-900: #244080;
+  --blue-950: #172953;
+
+  /* Numbers */
+  --numbers-0: 0px;
+  --numbers-25: 1px;
+  --numbers-50: 2px;
+  --numbers-75: 3px;
+  --numbers-100: 0.25rem;
+  --numbers-200: 0.5rem;
+  --numbers-300: 0.75rem;
+  --numbers-350: 0.875rem;
+  --numbers-400: 1rem;
+  --numbers-500: 1.25rem; /* 20px */
+  --numbers-600: 1.5rem; /* 24px */
+  --numbers-700: 1.75rem; /* 28px */
+  --numbers-800: 2rem; /* 32px */
+  --numbers-900: 2.25rem; /* 36px */
+  --numbers-1000: 2.5rem; /* 40px */
+  --numbers-1100: 2.75rem; /* 44px */
+  --numbers-1200: 3rem; /* 48px */
+  --numbers-1300: 3.25rem; /* 52px */
+  --numbers-1400: 3.5rem; /* 56px */
+  --numbers-1500: 3.75rem; /* 60px */
+  --numbers-1600: 4rem; /* 64px */
+  --numbers-1700: 4.25rem; /* 68px */
+  --numbers-1800: 4.5rem; /* 72px */
+  --numbers-1900: 4.75rem; /* 76px */
+  --numbers-2000: 5rem; /* 80px */
+
+  /* Fonts */
+  --font-family-primary: 'Figtree', sans-serif;
+  --font-family-secondary: 'Quicksand', sans-serif;
+}
+
+/* spacing for this project  */
+:root {
+  --spacing-none: var(--numbers-0);
+  --spacing-3xs: var(--numbers-50);
+  --spacing-2xs: var(--numbers-100);
+  --spacing-xs: var(--numbers-200);
+  --spacing-sm: var(--numbers-300);
+  --spacing-md: var(--numbers-400);
+  --spacing-lg: var(--numbers-500);
+  --spacing-xl: var(--numbers-600);
+  --spacing-2xl: var(--numbers-800);
+  --spacing-3xl: var(--numbers-1000);
+  --spacing-4xl: var(--numbers-1400);
+  --spacing-5xl: var(--numbers-1600);
+  --spacing-6xl: var(--numbers-1800);
+  --spacing-7xl: var(--numbers-2000);
+
+  /* Paragraph spacing */
+
+  /* Body */
+  --paragraph-spacing-caption: var(--numbers-400);
+  --paragraph-spacing-sm: var(--numbers-400);
+  --paragraph-spacing-md: var(--numbers-400);
+  --paragraph-spacing-lg: var(--numbers-500);
+
+  /* Heading */
+  --paragraph-spacing-h6: var(--numbers-600);
+  --paragraph-spacing-h5: var(--numbers-700);
+  --paragraph-spacing-h4: var(--numbers-800);
+  --paragraph-spacing-h3: var(--numbers-900);
+  --paragraph-spacing-h2: var(--numbers-1000);
+  --paragraph-spacing-h1: var(--numbers-1200);
+}
+
+/* border radiuses for this project */
+:root {
+  --radius-none: var(--numbers-0);
+  --radius-xs: var(--numbers-100);
+  --radius-sm: var(--numbers-200);
+  --radius-md: var(--numbers-400);
+  --radius-lg: var(--numbers-800);
+  --radius-xl: var(--numbers-1100);
+}
+
+/* font sizes for this project */
+:root {
+  /* Body  */
+  --font-size-caption: var(--numbers-300);
+  --font-size-sm: var(--numbers-350);
+  --font-size-md: var(--numbers-400);
+  --font-size-lg: var(--numbers-500);
+
+  /* Header */
+  --font-size-h6: var(--numbers-500);
+  --font-size-h5: var(--numbers-600);
+  --font-size-h4: var(--numbers-800);
+  --font-size-h3: var(--numbers-1200);
+  --font-size-h2: var(--numbers-1500);
+  --font-size-h1: var(--numbers-1800);
+}
+
+/* line heights for this project  */
+:root {
+  /* Body */
+  --line-height-caption: var(--numbers-500);
+  --line-height-sm: var(--numbers-600);
+  --line-height-md: var(--numbers-600);
+  --line-height-lg: var(--numbers-800);
+
+  /* Heading */
+  --line-height-h6: var(--numbers-600);
+  --line-height-h5: var(--numbers-700);
+  --line-height-h4: var(--numbers-1000);
+  --line-height-h3: var(--numbers-1400);
+  --line-height-h2: var(--numbers-1800);
+  --line-height-h1: var(--numbers-2000);
+}
+
+/* semantic color variables for this project */
+:root {
+  /* Text */
+  --text-color-headings: var(--gray-800);
+  --text-color-negative: var(--gray-25);
+  --text-color-body: var(--gray-600);
+  --text-color-less-emphasis: var(--gray-500);
+
+  --text-color-action: var(--yellow-700);
+  --text-color-action-hover: var(--yellow-600);
+
+  --text-color-disabled: var(--gray-400);
+
+  --text-color-information: var(--blue-600);
+
+  --text-color-error: var(--red-500);
+  --text-color-warning: var(--orange-500);
+  --text-color-success: var(--green-500);
+  --text-color-on-action: var(--white);
+  --text-color-on-disabled: var(--gray-600);
+  --text-color-negative-2: var(--gray-25);
+
+  /* Border */
+  --border-color-surface: var(--gray-100);
+  --border-color-surface-secondary: var(--gray-200);
+  --border-color-text-default: var(--gray-200);
+  --border-color-text-hover: var(--gray-600);
+  --border-color-text-active: var(--gray-950);
+
+  --border-color-warning: var(--orange-500);
+  --border-color-warning-light: var(--orange-300);
+
+  --border-color-error: var(--red-500);
+  --border-color-error-light: var(--red-400);
+
+  --border-color-success: var(--green-500);
+  --border-color-success-light: var(--green-400);
+
+  --border-color-information: var(--blue-600);
+  --border-color-information-light: var(--blue-400);
+
+  --border-color-brand: var(--yellow-500);
+  --border-color-brand-light: var(--yellow-400);
+
+  /* Icon */
+  --icon-color-neutral: var(--gray-700);
+  --icon-color-neutral-hover: var(--gray-950);
+  --icon-color-neutral-white: var(--white);
+  --icon-color-primary-disabled: var(--gray-500);
+  --icon-color-brand: var(--yellow-500);
+  --icon-color-on-brand: var(--white);
+  --icon-color-information: var(--blue-500);
+  --icon-color-success: var(--green-500);
+  --icon-color-error: var(--red-500);
+  --icon-color-warning: var(--orange-500);
+
+  /* Surface */
+  --surface-color-base: var(--gray-25);
+  --surface-color-negative: var(--gray-800);
+  --surface-color-secondary: var(--white);
+  --surface-color-disabled-fill: var(--gray-50);
+  --surface-color-success: var(--green-100);
+  --surface-color-error: var(--red-100);
+  --surface-color-warning: var(--orange-100);
+  --surface-color-information: var(--blue-100);
+  --surface-color-action: var(--yellow-500);
+  --surface-color-task-hover: var(--grey-50);
+  --surface-color-task-pressed: var(--grey-100);
+  --surface-color-brand: var(--yellow-50);
+  --surface-color-footer-bg: var(--black);
+
+  /* Buttons */
+  /* Main/Primary */
+  --button-color-main-primary-default: var(--gray-800);
+  --button-color-main-primary-hover: var(--gray-700);
+  --button-color-main-primary-pressed: var(--gray-925);
+  --button-color-main-primary-disabled: var(--gray-200);
+  --button-color-main-primary-label: var(--white);
+  --button-color-main-primary-label-disabled: var(--gray-500);
+  --button-color-main-primary-icon: var(--white);
+  --button-color-main-primary-icon-disabled: var(--gray-500);
+  --button-color-main-primary-border: var(--black);
+
+  /* Main/Secondary */
+  --button-color-main-secondary-default: var(--gray-50);
+  --button-color-main-secondary-hover: var(--gray-100);
+  --button-color-main-secondary-pressed: var(--gray-300);
+  --button-color-main-secondary-disabled: var(--gray-50);
+  --button-color-main-secondary-label: var(--gray-800);
+  --button-color-main-secondary-label-disabled: var(--gray-300);
+  --button-color-main-secondary-icon: var(--gray-900);
+  --button-color-main-secondary-icon-disabled: var(--gray-500);
+
+  /* Main/Tetiary */
+  --button-color-main-tetiary-default: transparent;
+  --button-color-main-tetiary-hover: var(--gray-50);
+  --button-color-main-tetiary-pressed: var(--gray-200);
+  --button-color-main-tetiary-disabled: transparent;
+  --button-color-main-tetiary-label: var(--gray-800);
+  --button-color-main-tetiary-label-disabled: var(--gray-500);
+  --button-color-main-tetiary-icon: var(--gray-900);
+  --button-color-main-tetiary-icon-disabled: var(--gray-500);
+
+  /* Brand/Primary */
+  --button-color-brand-primary-default: var(--yellow-brand);
+  --button-color-brand-primary-hover: var(--yellow-400);
+  --button-color-brand-primary-pressed: var(--yellow-500);
+  --button-color-brand-primary-disabled: var(--gray-100);
+  --button-color-brand-primary-label: var(--yellow-950);
+  --button-color-brand-primary-label-disabled: var(--gray-300);
+  --button-color-brand-primary-icon: var(--yellow-950);
+  --button-color-brand-primary-icon-disabled: var(--gray-300);
+  --button-color-brand-primary-border: var(--yellow-700);
+
+  /* Brand/Secondary */
+  --button-color-brand-secondary-default: var(--yellow-100);
+  --button-color-brand-secondary-hover: var(--yellow-200);
+  --button-color-brand-secondary-pressed: var(--yellow-100);
+  --button-color-brand-secondary-disabled: var(--gray-50);
+  --button-color-brand-secondary-label: var(--yellow-800);
+  --button-color-brand-secondary-label-disabled: var(--yellow-300);
+  --button-color-brand-secondary-icon: var(--yellow-800);
+  --button-color-brand-secondary-icon-disabled: var(--yellow-300);
+
+  /* Brand/Tetiary */
+  --button-color-brand-tetiary-default: transparent;
+  --button-color-brand-tetiary-hover: var(--yellow-100);
+  --button-color-brand-tetiary-pressed: var(--yellow-25);
+  --button-color-brand-tetiary-disabled: transparent;
+  --button-color-brand-tetiary-label: var(--yellow-500);
+  --button-color-brand-tetiary-label-disabled: var(--yellow-300);
+  --button-color-brand-tetiary-icon: var(--yellow-500);
+  --button-color-brand-tetiary-icon-disabled: var(--yellow-300);
+
+  /* Destructive/Primary */
+  --button-color-destructive-primary-default: var(--red-500);
+  --button-color-destructive-primary-hover: var(--red-400);
+  --button-color-destructive-primary-pressed: var(--red-600);
+  --button-color-destructive-primary-disabled: var(--gray-100);
+  --button-color-destructive-primary-label: var(--white);
+  --button-color-destructive-primary-label-disabled: var(--gray-300);
+  --button-color-destructive-primary-icon: var(--white);
+  --button-color-destructive-primary-icon-disabled: var(--gray-300);
+  --button-color-destructive-primary-border: var(--red-800);
+
+  /* Destructive/Secondary */
+  --button-color-destructive-secondary-default: var(--red-100);
+  --button-color-destructive-secondary-hover: var(--red-200);
+  --button-color-destructive-secondary-pressed: var(--red-300);
+  --button-color-destructive-secondary-disabled: var(--gray-50);
+  --button-color-destructive-secondary-label: var(--red-500);
+  --button-color-destructive-secondary-label-disabled: var(--red-300);
+  --button-color-destructive-secondary-icon: var(--red-500);
+  --button-color-destructive-secondary-icon-disabled: var(--red-300);
+
+  /* Destructive/Tetiary */
+  --button-color-destructive-tetiary-default: transparent;
+  --button-color-destructive-tetiary-hover: var(--red-100);
+  --button-color-destructive-tetiary-pressed: var(--red-200);
+  --button-color-destructive-tetiary-disabled: transparent;
+  --button-color-destructive-tetiary-label: var(--red-500);
+  --button-color-destructive-tetiary-label-disabled: var(--red-300);
+  --button-color-destructive-tetiary-icon: var(--red-500);
+  --button-color-destructive-tetiary-icon-disabled: var(--red-300);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root { */
+/* Text */
+/* --text-color-headings: var(--gray-25);
+    --text-color-negative: var(--gray-800);
+    --text-color-body: var(--gray-300);
+    --text-color-less-emphasis: var(--gray-500);
+
+    --text-color-action: var(--yellow-400);
+    --text-color-action-hover: var(--yellow-500);
+
+    --text-color-disabled: var(--gray-600);
+
+    --text-color-information: var(--blue-600);
+
+    --text-color-error: var(--red-400);
+    --text-color-warning: var(--orange-400);
+    --text-color-success: var(--green-400);
+    --text-color-on-action: var(--white);
+    --text-color-on-disabled: var(--white);
+    --text-color-negative-2: var(--gray-800); */
+
+/* Border */
+/* --border-color-surface: var(--gray-800);
+    --border-color-surface-secondary: var(--gray-800);
+    --border-color-text-default: var(--gray-700);
+    --border-color-text-hover: var(--gray-600);
+    --border-color-text-active: var(--gray-50);
+
+    --border-color-warning: var(--orange-400);
+    --border-color-warning-light: var(--orange-400);
+
+    --border-color-error: var(--red-400);
+    --border-color-error-light: var(--red-900);
+
+    --border-color-success: var(--green-400);
+    --border-color-success-light: var(--green-900);
+
+    --border-color-information: var(--blue-600);
+    --border-color-information-light: var(--blue-900);
+
+    --border-color-brand: var(--yellow-400);
+    --border-color-brand-light: var(--yellow-800); */
+
+/* Icon */
+/* --icon-color-neutral: var(--gray-100);
+    --icon-color-neutral-hover: var(--gray-500);
+    --icon-color-neutral-white: var(--gray-900);
+    --icon-color-primary-disabled: var(--gray-600-dark);
+    --icon-color-brand: var(--yellow-400);
+    --icon-color-on-brand: var(--white);
+    --icon-color-information: var(--blue-400);
+    --icon-color-success: var(--green-400);
+    --icon-color-error: var(--red-400);
+    --icon-color-warning: var(--orange-400); */
+
+/* Surface */
+/* --surface-color-base: var(--gray-950);
+    --surface-color-negative: var(--gray-25);
+    --surface-color-secondary: var(--gray-900);
+    --surface-color-disabled-fill: var(--gray-800);
+    --surface-color-success: var(--green-950);
+    --surface-color-error: var(--red-950);
+    --surface-color-warning: var(--orange-950);
+    --surface-color-information: var(--blue-950);
+    --surface-color-action: var(--yellow-400);
+    --surface-color-task-hover: var(--grey-800);
+    --surface-color-task-pressed: var(--grey-800);
+    --surface-color-brand: var(--yellow-950);
+    --surface-color-footer-bg: var(--white);
+  } */
+
+/* Buttons */
+/* Main/Primary */
+/* --button-color-main-primary-default: var(--gray-25);
+  --button-color-main-primary-hover: var(--gray-300);
+  --button-color-main-primary-pressed: var(--gray-300);
+  --button-color-main-primary-disabled: var(--gray-800);
+  --button-color-main-primary-label: var(--gray-900);
+  --button-color-main-primary-label-disabled: var(--gray-500);
+  --button-color-main-primary-icon: var(--black);
+  --button-color-main-primary-icon-disabled: var(--gray-500);
+  --button-color-main-primary-border: var(--white); */
+
+/* Main/Secondary */
+/* --button-color-main-secondary-default: var(--gray-800);
+--button-color-main-secondary-hover: var(--gray-700);
+--button-color-main-secondary-pressed: var(--gray-800);
+--button-color-main-secondary-disabled: var(--gray-800);
+--button-color-main-secondary-label: var(--gray-50);
+--button-color-main-secondary-label-disabled: var(--gray-500);
+--button-color-main-secondary-icon: var(--gray-50);
+--button-color-main-secondary-icon-disabled: var(--gray-500); */
+
+/* Main/Tetiary */
+/* --button-color-main-tetiary-default: transparent;
+--button-color-main-tetiary-hover: var(--gray-700);
+--button-color-main-tetiary-pressed: var(--gray-800);
+--button-color-main-tetiary-disabled: transparent;
+--button-color-main-tetiary-label: var(--gray-50);
+--button-color-main-tetiary-label-disabled: var(--gray-500);
+--button-color-main-tetiary-icon: var(--gray-50);
+--button-color-main-tetiary-icon-disabled: var(--gray-500); */
+
+/* Brand/Primary */
+/* --button-color-brand-primary-default: var(--yellow-brand);
+--button-color-brand-primary-hover: var(--yellow-600);
+--button-color-brand-primary-pressed: var(--yellow-800);
+--button-color-brand-primary-disabled: var(--yellow-950);
+--button-color-brand-primary-label: var(--white);
+--button-color-brand-primary-label-disabled: var(--gray-500);
+--button-color-brand-primary-icon: var(--white);
+--button-color-brand-primary-icon-disabled: var(--gray-500);
+--button-color-brand-primary-border: var(--white); */
+
+/* Brand/Secondary */
+/* --button-color-brand-secondary-default: var(--yellow-950);
+--button-color-brand-secondary-hover: var(--yellow-800);
+--button-color-brand-secondary-pressed: var(--yellow-900);
+--button-color-brand-secondary-disabled: var(--gray-800);
+--button-color-brand-secondary-label: var(--yellow-500);
+--button-color-brand-secondary-label-disabled: var(--yellow-600);
+--button-color-brand-secondary-icon: var(--yellow-500);
+--button-color-brand-secondary-icon-disabled: var(--yellow-600); */
+
+/* Brand/Tetiary */
+/* --button-color-brand-tetiary-default: transparent;
+--button-color-brand-tetiary-hover: var(--yellow-900);
+--button-color-brand-tetiary-pressed: var(--yellow-950);
+--button-color-brand-tetiary-disabled: transparent;
+--button-color-brand-tetiary-label: var(--yellow-400);
+--button-color-brand-tetiary-label-disabled: var(--yellow-600);
+--button-color-brand-tetiary-icon: var(--yellow-400);
+--button-color-brand-tetiary-icon-disabled: var(--yellow-600); */
+
+/* Destructive/Primary */
+/* --button-color-destructive-primary-default: var(--red-400);
+--button-color-destructive-primary-hover: var(--red-500);
+--button-color-destructive-primary-pressed: var(--red-600);
+--button-color-destructive-primary-disabled: var(--gray-800);
+--button-color-destructive-primary-label: var(--white);
+--button-color-destructive-primary-label-disabled: var(--gray-500);
+--button-color-destructive-primary-icon: var(--white);
+--button-color-destructive-primary-icon-disabled: var(--gray-500);
+--button-color-destructive-primary-border: var(--red-950); */
+
+/* Destructive/Secondary */
+/* --button-color-destructive-secondary-default: var(--red-950);
+--button-color-destructive-secondary-hover: var(--red-800);
+--button-color-destructive-secondary-pressed: var(--red-900);
+--button-color-destructive-secondary-disabled: var(--gray-800);
+--button-color-destructive-secondary-label: var(--red-500);
+--button-color-destructive-secondary-label-disabled: var(--red-600);
+--button-color-destructive-secondary-icon: var(--red-500);
+--button-color-destructive-secondary-icon-disabled: var(--red-600); */
+
+/* Destructive/Tetiary */
+/* --button-color-destructive-tetiary-default: transparent;
+--button-color-destructive-tetiary-hover: var(--red-900);
+--button-color-destructive-tetiary-pressed: var(--red-950);
+--button-color-destructive-tetiary-disabled: transparent;
+--button-color-destructive-tetiary-label: var(--red-400);
+--button-color-destructive-tetiary-label-disabled: var(--red-600);
+--button-color-destructive-tetiary-icon: var(--red-400);
+--button-color-destructive-tetiary-icon-disabled: var(--red-600); */
+/* }
+When we're ready, we'd allow dark mode  */
