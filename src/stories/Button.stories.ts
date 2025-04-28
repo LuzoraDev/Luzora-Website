@@ -1,56 +1,133 @@
 import { fn } from '@storybook/test';
 import type { Meta, StoryObj } from '@storybook/vue3';
+import Button from '@/components/ui/Button.vue';
+import RemoveFolder from '@/components/icons/common/RemoveFolder.vue';
+import '@/assets/base.css';
+import '@/assets/main.css';
 
-import Button from './Button.vue';
-
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
-  title: 'Example/Button',
+  title: 'UI/Button',
   component: Button,
-  // This component will have an automatically generated docsPage entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
   argTypes: {
-    size: { control: 'select', options: ['small', 'medium', 'large'] },
-    backgroundColor: { control: 'color' },
+    variant: {
+      control: 'select',
+      options: ['primary', 'secondary', 'tetiary'],
+    },
+    theme: {
+      control: 'select',
+      options: ['main', 'brand', 'destructive'],
+    },
+    size: {
+      control: 'select',
+      options: ['sm', 'md', 'lg'],
+    },
+    disabled: { control: 'boolean' },
+    text: { control: 'text' },
+    icon: {
+      control: 'object',
+    },
+    onClick: { action: 'clicked' },
   },
   args: {
-    primary: false,
-    // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
+    variant: 'primary',
+    theme: 'main',
+    size: 'md',
+    disabled: false,
+    text: 'Button',
     onClick: fn(),
   },
 } satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
-/*
- *👇 Render functions are a framework specific feature to allow you control on how the component renders.
- * See https://storybook.js.org/docs/api/csf
- * to learn how to use render functions.
- */
+
 export const Primary: Story = {
   args: {
-    primary: true,
-    label: 'Button',
+    variant: 'primary',
+    theme: 'main',
+    text: 'Primary Button',
   },
 };
 
 export const Secondary: Story = {
   args: {
-    primary: false,
-    label: 'Button',
+    variant: 'secondary',
+    theme: 'main',
+    text: 'Secondary Button',
   },
 };
 
-export const Large: Story = {
+export const Tetiary: Story = {
   args: {
-    label: 'Button',
-    size: 'large',
+    variant: 'tetiary',
+    theme: 'main',
+    text: 'Tetiary Button',
+  },
+};
+
+export const BrandPrimary: Story = {
+  args: {
+    variant: 'primary',
+    theme: 'brand',
+    text: 'Brand Primary',
+  },
+};
+
+export const Destructive: Story = {
+  args: {
+    variant: 'primary',
+    theme: 'destructive',
+    text: 'Destructive Button',
   },
 };
 
 export const Small: Story = {
   args: {
-    label: 'Button',
-    size: 'small',
+    size: 'sm',
+    text: 'Small Button',
   },
+};
+
+export const Large: Story = {
+  args: {
+    size: 'lg',
+    text: 'Large Button',
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    disabled: true,
+    text: 'Disabled Button',
+  },
+};
+
+export const WithIcon: Story = {
+  args: {
+    text: 'With Icon',
+    icon: {
+      present: true,
+      position: 'left',
+      component: RemoveFolder,
+    },
+  },
+};
+
+export const IconRight: Story = {
+  args: {
+    text: 'Icon Right',
+    icon: {
+      present: true,
+      position: 'right',
+      component: RemoveFolder,
+    },
+  },
+};
+
+export const SlotContent: Story = {
+  render: () => ({
+    components: { Button },
+    template: '<Button>Custom Slot Content</Button>',
+  }),
 };

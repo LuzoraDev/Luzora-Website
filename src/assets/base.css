@@ -1,19 +1,19 @@
 /* color palette (and more) standard(s) for LUZORA*/
 :root {
   /* Primary  */
-  --yellow-25: #fefdf1;
-  --yellow-50: #fefbed;
-  --yellow-100: #fbf2c8;
-  --yellow-200: #f9ecae;
-  --yellow-300: #f6e389;
-  --yellow-400: #f5dd72;
-  --yellow-brand: #f8d424;
-  --yellow-500: #f2d54f;
-  --yellow-600: #dcc248;
-  --yellow-700: #ac9738;
+  --yellow-25: #fffdf5;
+  --yellow-50: #fffbea;
+  --yellow-100: #fff2bd;
+  --yellow-200: #ffec9d;
+  --yellow-300: #ffe371;
+  --yellow-400: #ffdd55;
+  --yellow-brand: #ffd52b;
+  --yellow-500: #ffd52b;
+  --yellow-600: #e8c227;
+  --yellow-700: #b5971f;
   --yellow-800: #85752b;
-  --yellow-900: #665921;
-  --yellow-950: #534710;
+  --yellow-900: #6b5912;
+  --yellow-950: #473c0c;
 
   /* Neutral  */
   --white: #ffffff;
@@ -304,7 +304,7 @@
   /* Brand/Primary */
   --button-color-brand-primary-default: var(--yellow-brand);
   --button-color-brand-primary-hover: var(--yellow-400);
-  --button-color-brand-primary-pressed: var(--yellow-500);
+  --button-color-brand-primary-pressed: var(--yellow-600);
   --button-color-brand-primary-disabled: var(--gray-100);
   --button-color-brand-primary-label: var(--yellow-950);
   --button-color-brand-primary-label-disabled: var(--gray-300);
@@ -313,13 +313,13 @@
   --button-color-brand-primary-border: var(--yellow-700);
 
   /* Brand/Secondary */
-  --button-color-brand-secondary-default: var(--yellow-100);
-  --button-color-brand-secondary-hover: var(--yellow-200);
-  --button-color-brand-secondary-pressed: var(--yellow-100);
+  --button-color-brand-secondary-default: var(--yellow-200);
+  --button-color-brand-secondary-hover: var(--yellow-400);
+  --button-color-brand-secondary-pressed: var(--yellow-600);
   --button-color-brand-secondary-disabled: var(--gray-50);
-  --button-color-brand-secondary-label: var(--yellow-800);
+  --button-color-brand-secondary-label: var(--gray-800);
   --button-color-brand-secondary-label-disabled: var(--yellow-300);
-  --button-color-brand-secondary-icon: var(--yellow-800);
+  --button-color-brand-secondary-icon: var(--gray-800);
   --button-color-brand-secondary-icon-disabled: var(--yellow-300);
 
   /* Brand/Tetiary */
@@ -327,10 +327,10 @@
   --button-color-brand-tetiary-hover: var(--yellow-100);
   --button-color-brand-tetiary-pressed: var(--yellow-25);
   --button-color-brand-tetiary-disabled: transparent;
-  --button-color-brand-tetiary-label: var(--yellow-500);
-  --button-color-brand-tetiary-label-disabled: var(--yellow-300);
-  --button-color-brand-tetiary-icon: var(--yellow-500);
-  --button-color-brand-tetiary-icon-disabled: var(--yellow-300);
+  --button-color-brand-tetiary-label: var(--yellow-800);
+  --button-color-brand-tetiary-label-disabled: var(--gray-200);
+  --button-color-brand-tetiary-icon: var(--yellow-800);
+  --button-color-brand-tetiary-icon-disabled: var(--gray-200);
 
   /* Destructive/Primary */
   --button-color-destructive-primary-default: var(--red-500);
@@ -473,11 +473,11 @@
 --button-color-brand-primary-hover: var(--yellow-600);
 --button-color-brand-primary-pressed: var(--yellow-800);
 --button-color-brand-primary-disabled: var(--yellow-950);
---button-color-brand-primary-label: var(--white);
+--button-color-brand-primary-label: var(--gray-800);
 --button-color-brand-primary-label-disabled: var(--gray-500);
---button-color-brand-primary-icon: var(--white);
+--button-color-brand-primary-icon: var(--gray-800);
 --button-color-brand-primary-icon-disabled: var(--gray-500);
---button-color-brand-primary-border: var(--white); */
+--button-color-brand-primary-border: var(--yellow-700); */
 
 /* Brand/Secondary */
 /* --button-color-brand-secondary-default: var(--yellow-950);
@@ -497,7 +497,7 @@
 --button-color-brand-tetiary-label: var(--yellow-400);
 --button-color-brand-tetiary-label-disabled: var(--yellow-600);
 --button-color-brand-tetiary-icon: var(--yellow-400);
---button-color-brand-tetiary-icon-disabled: var(--yellow-600); */
+--button-color-brand-tetiary-icon-disabled: var(--yellow-800); */
 
 /* Destructive/Primary */
 /* --button-color-destructive-primary-default: var(--red-400);
