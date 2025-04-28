@@ -5,3 +5,27 @@
 html {
   background-color: var(--surface-color-secondary);
 }
+
+@media screen and (max-width: 1366px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* @media screen and (max-width: 768px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 65%;
+  }
+} */

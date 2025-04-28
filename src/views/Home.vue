@@ -1,10 +1,10 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
-import Faq1 from '@/components/faqs/Faq1.vue';
-import Faq2 from '@/components/faqs/Faq2.vue';
-import Faq3 from '@/components/faqs/Faq3.vue';
-import Faq4 from '@/components/faqs/Faq4.vue';
-import Faq5 from '@/components/faqs/Faq5.vue';
+import Faq1 from '@/components/ui/faqs/Faq1.vue';
+import Faq2 from '@/components/ui/faqs/Faq2.vue';
+import Faq3 from '@/components/ui/faqs/Faq3.vue';
+import Faq4 from '@/components/ui/faqs/Faq4.vue';
+import Faq5 from '@/components/ui/faqs/Faq5.vue';
 import ArrowDown from '@/components/icons/common/ArrowDown.vue';
 import ArrowsUpDown from '@/components/icons/common/ArrowsUpDown.vue';
 import CodeBrackets from '@/components/icons/common/CodeBrackets.vue';
@@ -393,7 +393,8 @@ const onLeave = (el: Element, done: () => void) => {
             <span class="text-(--text-color-headings)">
               {{ faq?.question }}
             </span>
-            <ArrowDown />
+            <ArrowDown
+              :style="`transform: ${currentFaq === index ? 'rotate(180deg)' : ''}; transition: all .4s`" />
           </button>
 
           <transition @enter="onEnter" @leave="onLeave">

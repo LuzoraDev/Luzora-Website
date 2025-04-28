@@ -1,3 +1,7 @@
+<script lang="ts">
+export default { name: 'HeaderVOne' };
+</script>
+
 <script setup lang="ts">
 import LogoBlack from '../icons/common/LogoBlack.vue';
 import Button from '../ui/Button.vue';
@@ -113,7 +117,9 @@ watchEffect(updateTargetRotation);
           Track, schedule, and execute Web3 tasks effortlessly—stay organized
           and in control.
         </p>
-        <div class="mx-auto w-fit"><Button>Join waitlist</Button></div>
+        <div class="mx-auto w-fit">
+          <Button variant="primary" text="Join waitlist" theme="brand" />
+        </div>
       </div>
     </section>
   </header>
