@@ -1,3 +1,5 @@
+import Community from '@/views/Community.vue';
+import HiveStory from '@/views/HiveStory.vue';
 import Home from '@/views/Home.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
@@ -8,6 +10,16 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: Home,
+    },
+    {
+      path: '/story',
+      name: 'story',
+      component: HiveStory,
+    },
+    {
+      path: '/community',
+      name: 'community',
+      component: Community,
     },
     // {
     //   path: '/about',
