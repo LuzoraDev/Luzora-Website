@@ -1,20 +1,35 @@
+<!-- eslint-disable vue/no-reserved-component-names -->
+<!-- eslint-disable vue/multi-word-component-names -->
 <script lang="ts">
-export default { name: 'HeaderVOne' };
+export default { name: 'Header' };
 </script>
 
 <script setup lang="ts">
 import LogoBlack from '../icons/common/LogoBlack.vue';
 import Button from '../ui/Button.vue';
-import { RouterLink } from 'vue-router';
+import { RouterLink, useRoute } from 'vue-router';
 import { useMouse } from '@vueuse/core';
 import { ref, watchEffect, onMounted, onUnmounted } from 'vue';
+import ArrowRight from '../icons/common/ArrowRight.vue';
+import VectorLeft from '../icons/header/VectorLeft.vue';
+import VectorRight from '../icons/header/VectorRight.vue';
+import { computed } from 'vue';
 
 const navLinks = [
+  { name: 'Home', href: '/' },
   { name: 'Hive Story', href: '/story' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Docs', href: '/docs' },
   { name: 'Community', href: '/community' },
 ];
+
+//{ name: 'Blog', href: '/blog' },
+// { name: 'Docs', href: '/docs' },
+
+const route = useRoute();
+
+const isActiveLink = (href: string) => {
+  return route.path === href;
+};
+const isHome = computed(() => route.path === '/');
 
 const container = ref<HTMLElement | null>(null);
 const isHovering = ref<boolean>(false);
@@ -79,14 +94,16 @@ watchEffect(updateTargetRotation);
 
 <template lang="html">
   <header
-    class="mx-auto mt-(--numbers-800) h-fit w-[97%] max-w-[126.6875rem] rounded-t-(--radius-lg) border-(--border-color-surface-secondary) bg-(--surface-color-base)">
+    v-if="isHome"
+    class="mx-auto mt-(--numbers-800) h-fit w-[97%] max-w-[126.6875rem] rounded-t-(--radius-lg) border border-b-0 border-(--border-color-surface-secondary) bg-(--surface-color-base)">
     <section
       class="flex flex-1 flex-col gap-[2.625rem] p-[1.5rem_1.5rem_1.125rem_1.5rem]">
       <div
-        class="relative flex h-[28.3125rem] flex-col justify-end overflow-hidden rounded-(--radius-md) bg-(--yellow-brand)">
+        style="box-shadow: 0px 4px 0px 0px rgba(0, 0, 0, 0.1) inset"
+        class="relative flex h-[28.3125rem] flex-col justify-end overflow-hidden rounded-(--radius-md) border border-(--yellow-700) bg-(--yellow-brand)">
         <div
           ref="container"
-          class="relative mx-auto w-[68.0625rem] translate-y-[50%]"
+          class="relative z-[3] mx-auto w-[68.0625rem] translate-y-[50%]"
           @mouseenter="isHovering = true"
           @mouseleave="isHovering = false"
           :style="{
@@ -99,32 +116,39 @@ watchEffect(updateTargetRotation);
             alt="Header Image" />
           <img
             src="/images/rookie-bee.png"
-            class="absolute right-0 bottom-1/2 w-[9.3125rem] translate-x-3/4"
+            class="absolute right-0 bottom-1/2 z-[3] w-[9.3125rem] translate-x-3/4"
             alt="Header Image" />
         </div>
         <img
           src="/images/header-img-1.png"
-          class="absolute top-0 left-0 w-[24.3125rem]"
+          class="absolute top-0 left-0 z-[3] w-[24.3125rem]"
           alt="Header Image" />
+        <VectorLeft class="absolute left-0" />
+        <VectorRight class="absolute right-0" />
       </div>
       <div>
         <h1
-          class="mx-auto mb-[0.8125rem] w-[45rem] text-center font-(family-name:--font-family-primary) text-(length:--font-size-h2) leading-(--line-height-h2) font-[700] tracking-[-1.2px] text-(--text-color-headings)">
+          class="mx-auto mb-[1.125rem] w-[45rem] text-center font-(family-name:--font-family-primary) text-(length:--font-size-h1) leading-(--line-height-h1) font-[700] tracking-[-1.2px] text-(--text-color-headings)">
           Your Web3 activities organized in one place
         </h1>
         <p
-          class="mx-auto mb-[2.25rem] w-[30.875rem] text-center font-(family-name:--font-family-primary) text-(length:--font-size-h6) leading-(--line-height-h6) font-[500] text-(--gray-500)">
+          class="mx-auto mb-[1.75rem] w-[30.875rem] text-center font-(family-name:--font-family-primary) text-(length:--font-size-h5) leading-(--line-height-h5) font-[500] text-(--gray-500)">
           Track, schedule, and execute Web3 tasks effortlessly—stay organized
           and in control.
         </p>
         <div class="mx-auto w-fit">
-          <Button variant="primary" text="Join waitlist" theme="brand" />
+          <Button
+            variant="primary"
+            size="lg"
+            :icon="{ present: true, position: 'right', component: ArrowRight }"
+            text="Join Hivelist"
+            theme="brand" />
         </div>
       </div>
     </section>
   </header>
   <section
-    class="sticky top-0 z-[6] mx-auto flex h-fit w-[97%] max-w-[126.6875rem] items-center justify-between rounded-b-(--radius-lg) border-(--border-color-surface-secondary) bg-(--surface-color-base) p-[1.1875rem_1rem]">
+    class="sticky top-0 z-[6] mx-auto flex h-fit w-[97%] max-w-[126.6875rem] items-center justify-between rounded-b-(--radius-lg) border border-t-0 border-(--border-color-surface-secondary) bg-(--surface-color-base) p-[1.1875rem_1rem]">
     <RouterLink to="/">
       <figure class="px-(--spacing-lg) py-(--numbers-400)">
         <LogoBlack />
@@ -132,15 +156,25 @@ watchEffect(updateTargetRotation);
     </RouterLink>
     <nav class="flex w-fit">
       <ul class="flex items-center gap-(--numbers-400)">
-        <li v-for="(link, idx) in navLinks" :key="idx">
+        <li v-for="(link, idx) in navLinks" class="relative" :key="idx">
           <RouterLink
-            class="rounded-(--radius-sm) px-(--numbers-200) py-(--numbers-100) font-(family-name:--font-family-secondary) text-(length:--font-size-md) leading-(--line-height-md) font-[500] text-(--text-color-less-emphasis)"
+            :class="`${!isActiveLink(link?.href) && 'hover:bg-(--button-color-brand-primary-hover) focus:bg-(--button-color-brand-primary-pressed) focus-visible:bg-(--button-color-brand-primary-pressed)'}`"
+            class="rounded-(--radius-sm) px-(--numbers-200) py-(--numbers-100) font-(family-name:--font-family-secondary) text-(length:--font-size-md) leading-(--line-height-md) font-[500] text-(--text-color-body) transition-all duration-[.4s]"
             :to="link.href">
             {{ link.name }}
           </RouterLink>
+          <span
+            style="box-shadow: 0px -1px 1px 0px #a58c11 inset"
+            class="absolute bottom-0 left-1/2 h-[3px] w-[calc(100%_-_calc(var(--numbers-200)_*_2))] -translate-x-1/2 translate-y-1/2 bg-(--button-color-brand-primary-default)"
+            v-if="isActiveLink(link?.href)" />
         </li>
       </ul>
     </nav>
-    <Button>Nav Button</Button>
+    <Button
+      variant="primary"
+      size="lg"
+      :icon="{ present: true, position: 'right', component: ArrowRight }"
+      text="Launch app"
+      theme="brand" />
   </section>
 </template>

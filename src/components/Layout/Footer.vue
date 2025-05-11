@@ -1,10 +1,16 @@
-<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
 import LogoWhite from '../icons/common/LogoWhite.vue';
 import Twitter from '../icons/footer/Twitter.vue';
 import Discord from '../icons/footer/Discord.vue';
 import Github from '../icons/footer/Github.vue';
 import Button from '../ui/Button.vue';
+import ArrowRight from '../icons/common/ArrowRight.vue';
+</script>
+
+<!-- eslint-disable vue/no-reserved-component-names -->
+<!-- eslint-disable vue/multi-word-component-names -->
+<script lang="ts">
+export default { name: 'Footer' };
 </script>
 
 <template lang="html">
@@ -23,7 +29,12 @@ import Button from '../ui/Button.vue';
         to be the first to experience LUZORA.
       </p>
       <div class="mx-auto w-fit">
-        <Button>Footer Button</Button>
+        <Button
+          variant="primary"
+          size="lg"
+          :icon="{ present: true, position: 'right', component: ArrowRight }"
+          text="Join Hivelist"
+          theme="brand" />
       </div>
     </div>
     <div

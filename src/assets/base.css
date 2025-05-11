@@ -206,7 +206,7 @@
   --text-color-body: var(--gray-600);
   --text-color-less-emphasis: var(--gray-500);
 
-  --text-color-action: var(--yellow-700);
+  --text-color-action: var(--yellow-brand);
   --text-color-action-hover: var(--yellow-600);
 
   --text-color-disabled: var(--gray-400);

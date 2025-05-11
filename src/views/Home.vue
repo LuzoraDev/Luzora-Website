@@ -13,9 +13,10 @@ import PolygonS1 from '@/components/icons/homepage/PolygonS1.vue';
 import PolygonS2 from '@/components/icons/homepage/PolygonS2.vue';
 import PolygonS3 from '@/components/icons/homepage/PolygonS3.vue';
 import PolygonS4 from '@/components/icons/homepage/PolygonS4.vue';
-import HeaderVOne from '@/components/Layout/HeaderVOne.vue';
 import Button from '@/components/ui/Button.vue';
 import { ref } from 'vue';
+import ArrowRight from '@/components/icons/common/ArrowRight.vue';
+import Discord from '@/components/icons/footer/Discord.vue';
 
 const currentFaq = ref<null | number>(null);
 
@@ -155,7 +156,6 @@ const onLeave = (el: Element, done: () => void) => {
 </script>
 
 <template>
-  <HeaderVOne />
   <section
     class="mx-auto mt-[calc(var(--numbers-800)+var(--numbers-800))] mb-(--numbers-800) flex min-h-[54.8125rem] w-[97%] max-w-[126.6875rem] flex-col rounded-(--radius-lg) bg-[#F8D424]">
     <div class="h-fit px-(--numbers-1100) pt-(--numbers-1100) pb-[2.625rem]">
@@ -198,7 +198,7 @@ const onLeave = (el: Element, done: () => void) => {
       </div>
     </div>
   </section>
-  <section class="mx-auto w-[90%] max-w-[105rem] py-[4.625rem]">
+  <section class="mx-auto w-[90%] max-w-[82.5rem] py-[4.625rem]">
     <h6
       class="mb-[2.75rem] text-center font-(family-name:--font-family-secondary) text-(length:--font-size-md) leading-(--line-height-md) font-[700] text-(--text-color-headings)">
       FEATURES
@@ -211,7 +211,7 @@ const onLeave = (el: Element, done: () => void) => {
         <img
           :src="`/images/features-img-${index + 1}.png`"
           alt="features-image"
-          class="h-[22.4375rem] object-cover" />
+          class="h-[16.4375rem] object-cover" />
         <div class="h-fit p-[0_.875rem_.875rem_.875rem]">
           <div
             class="flex h-[7.4375rem] flex-col gap-[0.3125rem] rounded-(--radius-md) border border-(--border-color-surface-secondary) bg-white p-(--numbers-400)">
@@ -258,9 +258,11 @@ const onLeave = (el: Element, done: () => void) => {
         <figure
           :style="`border-color: var(${howLuzoraWorksDetail?.borderColor2 ?? howLuzoraWorksDetail?.borderColor}); background-color: var(${howLuzoraWorksDetail?.bgColor}); background-image: url(/images/how-luzora-works-img-${index + 1}.png);`"
           :class="`flex h-[29.75rem] w-full items-end justify-center rounded-(--radius-lg) border bg-contain ${index === 1 ? 'bg-right' : 'bg-center'} bg-no-repeat`">
-          <div class="pb-[1.25rem]" v-if="!!howLuzoraWorksDetail?.cta">
-            <Button>{{ howLuzoraWorksDetail?.cta?.text }}</Button>
-          </div>
+          <!-- <div class="pb-[1.25rem]" v-if="!!howLuzoraWorksDetail?.cta">
+            <Button :icon="{ present: true, component: ArrowRight }">
+              {{ howLuzoraWorksDetail?.cta?.text }}
+            </Button>
+          </div> -->
         </figure>
       </div>
     </div>
@@ -356,8 +358,45 @@ const onLeave = (el: Element, done: () => void) => {
       rewards and incentives.
     </p>
     <div class="mx-auto w-fit">
-      <Button>Learn more</Button>
+      <Button :icon="{ present: true, component: ArrowRight }">
+        Learn more
+      </Button>
     </div>
+  </section>
+  <section class="relative mx-auto w-[90%] max-w-[81.25rem] py-[5.9375rem]">
+    <div class="flex flex-col gap-[1rem]">
+      <h4
+        class="font-(family-name:--font-family-primary) text-(length:--font-size-h4) leading-(--line-height-h4) font-[600] text-(--text-color-headings)">
+        ALL APPS, PROJECTS & TASKS
+        <br />
+        ORGANIZED
+        <span
+          class="bg-(--gray-900) px-[.5rem] font-[900] text-(--text-color-action)">
+          IN ONE PLACE
+        </span>
+      </h4>
+      <p
+        class="w-[23.5625rem] font-(family-name:--font-family-secondary) text-(length:--font-size-md) font-[400] text-(--text-color-body)">
+        Use Luzora across various apps and ecosystem. Experience consistency in
+        utilizing any web3 product and achieve your goal.
+      </p>
+    </div>
+    <figure
+      class="relative mx-auto flex h-[45.5625rem] w-[44.5rem] items-center justify-center">
+      <image
+        class="absolute top-1/2 left-1/2 z-[1] h-[5.55625rem] w-[5.55625rem] -translate-x-1/2 -translate-y-1/2"
+        src="/images/animation-center.png" />
+      <image class="rotate-clockwise" src="/images/spin-layer.png" />
+    </figure>
+    <div class="relative z-[2] flex w-full justify-end">
+      <h4
+        class="font-(family-name:--font-family-primary) text-(length:--font-size-h4) leading-(--line-height-h4) font-[600] text-(--text-color-headings)">
+        Earn HP while at it.
+      </h4>
+    </div>
+
+    <div
+      class="absolute bottom-0 left-1/2 h-[30.1875rem] w-[74rem] -translate-x-1/2 bg-[#FFFFFF03e] backdrop-blur-[4px]" />
   </section>
   <section class="mx-auto max-w-[95rem] py-[7.3125rem]">
     <div class="mx-auto flex w-fit gap-(--numbers-800)">
@@ -378,7 +417,10 @@ const onLeave = (el: Element, done: () => void) => {
             Got more questions? Talk to us
           </p>
           <div class="w-fit">
-            <Button>Join our discord</Button>
+            <Button
+              :icon="{ component: Discord, present: true, position: 'left' }">
+              Join our discord
+            </Button>
           </div>
         </div>
       </div>
@@ -409,3 +451,18 @@ const onLeave = (el: Element, done: () => void) => {
     </div>
   </section>
 </template>
+
+<style scoped>
+.rotate-clockwise {
+  animation: rotate-anim 20s linear infinite;
+}
+
+@keyframes rotate-anim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+</style>
